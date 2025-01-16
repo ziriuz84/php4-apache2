@@ -1,0 +1,6 @@
+data/*.err
+data/*.pid
+.*.sw*
+app/ssdgest
+app/test
+app/index.php
