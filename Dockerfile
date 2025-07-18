@@ -1,4 +1,4 @@
-FROM alpine:3.12 AS build
+FROM alpine:3.22.1 AS build
 RUN apk add --no-cache build-base ncurses-dev zlib-dev wget flex perl imap-dev postfix mailx busybox-extras libcurl curl-dev curl libjpeg-turbo-dev libjpeg libpng libpng-dev libxml2-dev libxml2 zlib freetype freetype-dev libxpm libxpm-dev imap imap-dev apache-mod-auth-kerb
 
 
@@ -60,7 +60,7 @@ RUN echo 'AddType application/x-httpd-php php' >> /usr/local/apache2/conf/httpd.
 # Linuxtrheads hack explained: https://bugs.mysql.com/bug.php?id=19785
 # gnu++98 (error: narrowing conversion):  https://bugs.mysql.com/bug.php?id=19785
 
-FROM alpine:3.12
+FROM alpine:3.22.1
 # FROM mariadb:5.5.62
 
 RUN apk add --no-cache libstdc++ imap-dev tzdata postfix bash ncurses-dev gcompat openssl-dev ncurses-libs openssl certbot certbot-apache
